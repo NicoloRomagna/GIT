@@ -12,8 +12,8 @@ class Auto(Veicolo):
         super().__init__(marca, modello, anno)
         self.serbatoio = serbatoio
 
-    def rifornimento(self, litri):
-        serbatoio += litri 
+    def descrizione_serbatoio(self):
+        return f"{self.descrizione()}, Serbatoio: {self.serbatoio} litri"
 
 class Moto(Veicolo):
     def __init__(self, marca, modello, anno, tipo):
