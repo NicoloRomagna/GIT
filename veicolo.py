@@ -14,3 +14,11 @@ class Auto(Veicolo):
 
     def rifornimento(self, litri):
         serbatoio += litri 
+
+class Moto(Veicolo):
+    def __init__(self, marca, modello, anno, tipo):
+        super().__init__(marca, modello, anno)
+        self.tipo = tipo
+
+    def descrizione_tipo(self):
+        return f"{self.descrizione()}, Tipo: {self.tipo}"
